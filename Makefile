@@ -1,7 +1,9 @@
-# Makefile to create notebook
-
-# setting variables
+# run everything in the same shell
+.ONESHELL:
 SHELL:= /bin/bash
-JUPYTER_ENV_NAME=env
 
-# build jupyter notebook
+# create conda environment
+.PHONY: env
+
+# create html
+.PHONY: html
