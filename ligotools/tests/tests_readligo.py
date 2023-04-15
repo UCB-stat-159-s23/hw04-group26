@@ -13,14 +13,14 @@ strain_L1, time_L1, chan_dict_L1 = rl.loaddata(data_L1)
 
 # +
 def test_strainloaddataL1():
-    assert isinstance(strain_L1, np.array)
+    assert type(strain_L1) == np.ndarray
     
 def test_strainloaddataH1():
-    assert isinstance(strain_H1, np.array)
+    assert type(strain_H1) == np.ndarray
     
 def test_chan_dictH1():
-    assert isinstance(chan_dict_H1, dict)
+    assert type(chan_dict_H1) == dict
     
 def test_chan_dictL1():
-    assert isinstance(chan_dict_L1, dict)
+    assert type(chan_dict_L1) == dict
 
