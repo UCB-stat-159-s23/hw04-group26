@@ -8,6 +8,9 @@ env:
         source /srv/conda/etc/profile.d/conda.sh
         conda env create -f environment.yml
         conda activate ligo
+        conda activate notebook
+        conda install ipykernel
+        python -m ipykernel install --user --name make-env --display-name "IPython - Make"
 
 # create html
 .PHONY: html
@@ -17,6 +20,6 @@ html:
 # clean sub-folders
 .PHONY: clean
 clean: 
-        rm -rf figures/*
-        rm -rf audio/*
-        rm -rf _build
+        rm -f figures/*
+        rm -f audio/*
+        rm -r _build/*
